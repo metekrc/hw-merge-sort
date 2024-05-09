@@ -1,0 +1,46 @@
+1. Adım (Bölme):
+Diziyi ortadan ikiye böleriz:
+Sol yarı: [16, 21, 11]
+Sağ yarı: [8, 12, 22]
+
+2. Adım (Bölme):
+Her iki yarıyı tekrar ortadan ikiye böleriz:
+Sol yarının sol yarısı: [16]
+Sol yarının sağ yarısı: [21, 11]
+Sağ yarının sol yarısı: [8]
+Sağ yarının sağ yarısı: [12, 22]
+
+3. Adım (Bölme):
+Daha da böleriz:
+Sol yarının sağ yarısını ikiye böleriz:
+Sol yarının sağ yarısının sol yarısı: [21]
+Sol yarının sağ yarısının sağ yarısı: [11]
+
+4. Adım (Bölme):
+Son olarak, sağ yarının sağ yarısını böleriz:
+Sağ yarının sağ yarısının sol yarısı: [12]
+Sağ yarının sağ yarısının sağ yarısı: [22]
+
+Şimdi, her bir alt diziyi sıralama (merge) adımına geçelim.
+
+5. Adım (Birleştirme - Merge):
+İki elemanlı alt dizileri sıralayarak birleştirme işlemi yapılır:
+
+Sol yarının sağ yarısı birleşimi: [11, 21] → [11, 21]
+Sağ yarının sağ yarısı birleşimi: [12, 22] → [12, 22]
+
+6. Adım (Birleştirme - Merge):
+Daha büyük alt dizileri birleştirme işlemi:
+
+Sol yarının birleşimi: [11, 16, 21]
+Sağ yarının birleşimi: [8, 12, 22]
+
+7. Adım (Son Birleştirme - Merge):
+Son olarak, tüm diziyi birleştiririz:
+
+Birleştirilmiş dizimiz: [8, 11, 12, 16, 21, 22]
+
+Bu adımlar, Merge Sort algoritması ile verilen diziyi sıralamanın aşamalarını göstermektedir.
+
+Big-O Gösterimi:
+Merge Sort'un zaman karmaşıklığı O(n log n)’dir. Bu, dizinin eleman sayısına (n) bağlı olarak logaritmik artış hızında çalıştığını gösterir. Merge Sort, her bölme adımında log(n) işlem yapar ve her bir alt diziyi birleştirme adımında n işlem yapar. Dolayısıyla, toplam zaman karmaşıklığı n*log(n) olarak hesaplanır.
